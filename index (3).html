@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171411">
+  <title>Collrios Fragrance | Perfumes for Every Style</title>
+  <meta name="description" content="Explore fragrances at Collrios Fragrance. Browse the collection and order directly on WhatsApp.">
+  <style>
+    :root{--ink:#171411;--gold:#c8a45d;--cream:#f7f3eb;--paper:#fffdf8;--muted:#756e63;--line:#e8dfcf}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+    .announcement{background:var(--gold);color:#171411;text-align:center;padding:9px 14px;font-size:.78rem;letter-spacing:.08em}
+    header{background:var(--ink);color:#fff;padding:20px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:5;border-bottom:1px solid #3b3326}
+    .brand{font-family:Georgia,serif;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase}.brand small{display:block;color:var(--gold);font: .65rem Arial,sans-serif;letter-spacing:.32em;margin-top:5px}
+    nav{display:flex;gap:22px;align-items:center;font-size:.9rem}nav a:hover{color:var(--gold)}
+    .cart-button{border:1px solid var(--gold);color:var(--gold);background:transparent;padding:10px 14px;border-radius:2px}
+    .hero{min-height:470px;background:linear-gradient(90deg,rgba(18,16,13,.94),rgba(18,16,13,.66)),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;padding:70px 8vw;color:white}
+    .hero-copy{max-width:600px}.eyebrow{color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;font-weight:bold}
+    h1{font:clamp(2.6rem,6vw,5rem)/1.02 Georgia,serif;font-weight:normal;margin:18px 0}.hero p{color:#e1d9cb;line-height:1.8;max-width:490px}
+    .primary{display:inline-block;background:var(--gold);color:#171411;border:0;padding:14px 21px;margin-top:16px;font-weight:bold;letter-spacing:.04em}.primary:hover{background:#ddbf80}
+    .section{padding:65px 6vw}.section-heading{text-align:center;margin-bottom:32px}.section-heading h2{font:normal clamp(2rem,4vw,3rem) Georgia,serif;margin:10px 0}.section-heading p{color:var(--muted);line-height:1.6}
+    .filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:0 auto 26px}.filter-btn{border:1px solid var(--line);background:var(--paper);padding:10px 14px;color:var(--ink)}.filter-btn.active,.filter-btn:hover{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+    .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1200px;margin:auto}
+    .product{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}.product img{width:100%;aspect-ratio:4/4.3;object-fit:contain;background:#e9e0d1;padding:8px}
+    .product-info{padding:18px;display:flex;flex-direction:column;gap:9px;flex:1}.product-info h3{font:normal 1.3rem Georgia,serif;margin:0}.product-info p{color:var(--muted);font-size:.9rem;line-height:1.5;margin:0;flex:1}.price{font-weight:bold;color:#8a682c}.add{border:1px solid var(--ink);background:var(--ink);color:white;padding:12px;margin-top:6px}.add:hover{background:#393126}
+    .about{background:#e9e0d1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about h2{font:normal clamp(2rem,4vw,3rem) Georgia,serif;margin:12px 0}.about p{line-height:1.8;color:#514a40}
+    .about-art{min-height:280px;background:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1000&q=85') center/cover}
+    footer{background:var(--ink);color:#fff;padding:36px 6vw;text-align:center}footer p{color:#c9c0b1;line-height:1.7;font-size:.9rem}
+    .overlay{display:none;position:fixed;inset:0;background:#0009;z-index:10}.overlay.open{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:var(--paper);padding:24px;display:flex;flex-direction:column;box-shadow:-10px 0 30px #0002}
+    .cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.cart-head h2{font:normal 1.8rem Georgia,serif;margin:0}.close{border:0;background:none;font-size:1.7rem}.cart-items{overflow:auto;flex:1;padding:14px 0}.cart-row{padding:13px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:10px}.cart-row strong{display:block;margin-bottom:6px}.qty{display:flex;gap:9px;align-items:center;margin-top:8px}.qty button{border:1px solid var(--line);background:white;padding:4px 9px}.remove{border:0;background:none;color:#8a3c2f;font-size:.85rem}.cart-bottom{border-top:1px solid var(--line);padding-top:16px}.total{display:flex;justify-content:space-between;font-weight:bold;font-size:1.1rem}.checkout{width:100%;background:#16834a;color:white;border:0;padding:14px;margin-top:15px;font-weight:bold}.note{font-size:.8rem;color:var(--muted);line-height:1.5}
+    .empty{color:var(--muted);text-align:center;padding:40px 8px;line-height:1.6}
+    @media(max-width:760px){header{padding:15px 4vw;flex-wrap:wrap}.brand{font-size:1.05rem}nav{order:3;width:100%;justify-content:center;gap:18px;font-size:.84rem}.hero{min-height:430px;padding:55px 6vw}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-info{padding:13px}.product-info h3{font-size:1.1rem}.about{grid-template-columns:1fr}.about-art{min-height:230px}.section{padding:48px 4vw}}
+    @media(max-width:420px){.products{grid-template-columns:1fr 1fr}.product-info p{font-size:.82rem}.cart-button{padding:8px 10px}}
+  </style>
+</head>
+<body>
+  <div class="announcement">YOUR NEXT SIGNATURE SCENT STARTS HERE</div>
+  <header>
+    <a class="brand" href="#home">Collrios <small>FRAGRANCE</small></a>
+    <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">The art of fragrance</div>
+        <h1>Leave a little<br>luxury wherever you go.</h1>
+        <p>Explore fragrances from different brands for your mood, your moments, and your signature style. Browse the collection and message us to order.</p>
+        <a class="primary" href="#shop">EXPLORE THE COLLECTION</a>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading"><div class="eyebrow">The collection</div><h2>Find Your Fragrance</h2><p>Browse our perfume collection, add your favourites to the cart, and order through WhatsApp.</p></div>
+      <div class="filters" id="categoryFilters" aria-label="Filter products by category"><button class="filter-btn active" data-category="All">All fragrances</button><button class="filter-btn" data-category="Perfumes">Perfumes</button></div><div class="products" id="productGrid"></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div><div class="eyebrow">About Collrios</div><h2>A scent that feels like you.</h2><p>Collrios Fragrance is a multi-brand perfume shop. Explore the collection, choose the scents you love, and contact us directly to confirm your order.</p><a class="primary" href="#shop">SHOP THE COLLECTION</a></div>
+      <div class="about-art" role="img" aria-label="Perfume bottles arranged elegantly"></div>
+    </section>
+    <section class="section" id="contact"><div class="section-heading"><div class="eyebrow">Get in touch</div><h2>Let's find your scent.</h2><p>Have a question about a fragrance? Message us on WhatsApp and we'll help you.</p><button class="primary" id="contactWhatsApp">MESSAGE US ON WHATSAPP</button></div></section>
+  </main>
+  <footer><div class="brand">Collrios <small>FRAGRANCE</small></div><p>Find your signature scent.<br>Orders are confirmed directly with us on WhatsApp. No online payments on this website.</p><small>© <span id="year"></span> Collrios Fragrance</small></footer>
+
+  <div class="overlay" id="cartOverlay" aria-hidden="true">
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
+      <div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-bottom"><div class="total"><span>Estimated total</span><span id="cartTotal">₦0</span></div><p class="note">No payment is collected here. You'll send your selection to us on WhatsApp to confirm availability, delivery, and final cost.</p><button class="checkout" id="checkout">ORDER ON WHATSAPP</button></div>
+    </aside>
+  </div>
+
+  <script>
+    // SETUP: Replace this with your WhatsApp number, including country code and no +, spaces, or dashes.
+    // Nigeria example format: 2348012345678
+    const WHATSAPP_NUMBER = "2347039178020";
+
+    // Collrios Fragrance products. Prices are in Nigerian naira (₦).
+    const products = [
+      {id:1,name:"Mosuf Alya",category:"Perfumes",price:6000,description:"Red bottle with gold detailing.",image:"images/mosuf-alya-red.jpeg"},
+      {id:2,name:"Asad",category:"Perfumes",price:9000,description:"Black and gold presentation box.",image:"images/asad-black-gold.jpeg"},
+      {id:3,name:"Mosuf (Blue Bottle)",category:"Perfumes",price:6000,description:"Blue bottle with silver detailing.",image:"images/mosuf-blue.jpeg"},
+      {id:4,name:"Bleu Nuit",category:"Perfumes",price:4500,description:"Blue presentation box.",image:"images/bleu-nuit.jpeg"},
+      {id:5,name:"Mosuf Three-Bottle Set",category:"Perfumes",price:15000,description:"Three-bottle display set.",image:"images/mosuf-three-bottle-set.jpeg"},
+      {id:6,name:"Amjaad",category:"Perfumes",price:4500,description:"Black and purple presentation box.",image:"images/amjaad.jpeg"}
+    ];
+    const cart = {};
+    const money = n => "₦" + n.toLocaleString("en-NG");
+    const grid = document.getElementById("productGrid");
+    const cartCount = document.getElementById("cartCount");
+    const overlay = document.getElementById("cartOverlay");
+
+    let activeCategory = "All";
+    function renderProducts(){
+      const visibleProducts = activeCategory === "All" ? products : products.filter(p => p.category === activeCategory);
+      grid.innerHTML = visibleProducts.map(p => `<article class="product">
+        <img src="${p.image}" alt="${p.name} perfume" loading="lazy">
+        <div class="product-info"><div class="eyebrow">${p.category}</div><h3>${p.name}</h3><p>${p.description}</p><div class="price">${money(p.price)}</div><button class="add" data-add="${p.id}">ADD TO CART</button></div>
+      </article>`).join("");
+    }
+    document.getElementById("categoryFilters").addEventListener("click", e => {
+      const btn = e.target.closest("[data-category]");
+      if (!btn) return;
+      activeCategory = btn.dataset.category;
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b === btn));
+      renderProducts();
+    });
+    function renderCart(){
+      const items = Object.values(cart);
+      cartCount.textContent = items.reduce((sum,item)=>sum+item.qty,0);
+      document.getElementById("cartItems").innerHTML = items.length ? items.map(item=>`<div class="cart-row">
+        <div><strong>${item.product.name}</strong><span class="price">${money(item.product.price)}</span><div class="qty"><button data-minus="${item.product.id}" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button data-plus="${item.product.id}" aria-label="Increase quantity">+</button></div></div>
+        <button class="remove" data-remove="${item.product.id}">Remove</button></div>`).join("") : `<div class="empty">Your cart is empty.<br>Add a fragrance you love to get started.</div>`;
+      const total = items.reduce((sum,item)=>sum+item.product.price*item.qty,0);
+      document.getElementById("cartTotal").textContent = money(total);
+      document.getElementById("checkout").disabled = !items.length;
+      document.getElementById("checkout").style.opacity = items.length ? "1" : ".5";
+    }
+    function openCart(){overlay.classList.add("open");overlay.setAttribute("aria-hidden","false");renderCart()}
+    function closeCart(){overlay.classList.remove("open");overlay.setAttribute("aria-hidden","true")}
+    function sendWhatsApp(message){
+      if(!/^234\d{10}$/.test(WHATSAPP_NUMBER)){alert("The WhatsApp number has not been set up yet. In the HTML file, replace 234XXXXXXXXXX with your WhatsApp number including country code 234, with no + or spaces.");return}
+      window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener");
+    }
+    grid.addEventListener("click",e=>{const btn=e.target.closest("[data-add]");if(!btn)return;const p=products.find(x=>x.id===Number(btn.dataset.add));if(!cart[p.id])cart[p.id]={product:p,qty:0};cart[p.id].qty++;renderCart();btn.textContent="ADDED ✓";setTimeout(()=>btn.textContent="ADD TO CART",900)});
+    document.getElementById("cartItems").addEventListener("click",e=>{
+      const id=Number((e.target.closest("[data-plus]")||e.target.closest("[data-minus]")||e.target.closest("[data-remove]"))?.dataset.plus || e.target.closest("[data-minus]")?.dataset.minus || e.target.closest("[data-remove]")?.dataset.remove);
+      if(!id)return;
+      if(e.target.closest("[data-plus]"))cart[id].qty++;
+      if(e.target.closest("[data-minus]")){cart[id].qty--;if(cart[id].qty<=0)delete cart[id]}
+      if(e.target.closest("[data-remove]"))delete cart[id];
+      renderCart();
+    });
+    document.getElementById("openCart").addEventListener("click",openCart);
+    document.getElementById("closeCart").addEventListener("click",closeCart);
+    overlay.addEventListener("click",e=>{if(e.target===overlay)closeCart()});
+    document.getElementById("checkout").addEventListener("click",()=>{
+      const items=Object.values(cart);if(!items.length)return;
+      const lines=items.map(i=>`• ${i.product.name} x ${i.qty} — ${money(i.product.price*i.qty)}`).join("\n");
+      const total=items.reduce((sum,i)=>sum+i.product.price*i.qty,0);
+      sendWhatsApp(`Hello Collrios Fragrance! I'd like to enquire about this order:\n\n${lines}\n\nEstimated total: ${money(total)}\n\nPlease confirm availability, delivery fee, and final total. Thank you!`);
+    });
+    document.getElementById("contactWhatsApp").addEventListener("click",()=>sendWhatsApp("Hello Collrios Fragrance! I'd like to ask about your perfumes."));
+    document.getElementById("year").textContent=new Date().getFullYear();
+    renderProducts();renderCart();
+  </script>
+</body>
+</html>

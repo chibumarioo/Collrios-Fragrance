@@ -4,148 +4,1265 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171411">
-  <title>Collrios Fragrance | Perfumes for Every Style</title>
-  <meta name="description" content="Explore fragrances at Collrios Fragrance. Browse the collection and order directly on WhatsApp.">
+  <title>Collrios Fragrance | Premium Perfumes & Signature Scents</title>
+  <meta name="description" content="Collrios Fragrance offers premium perfumes, luxury fragrances, and signature scents. Shop online and place orders directly on WhatsApp.">
   <style>
-    :root{--ink:#171411;--gold:#c8a45d;--cream:#f7f3eb;--paper:#fffdf8;--muted:#756e63;--line:#e8dfcf}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-    a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-    .announcement{background:var(--gold);color:#171411;text-align:center;padding:9px 14px;font-size:.78rem;letter-spacing:.08em}
-    header{background:var(--ink);color:#fff;padding:20px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:5;border-bottom:1px solid #3b3326}
-    .brand{font-family:Georgia,serif;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase}.brand small{display:block;color:var(--gold);font: .65rem Arial,sans-serif;letter-spacing:.32em;margin-top:5px}
-    nav{display:flex;gap:22px;align-items:center;font-size:.9rem}nav a:hover{color:var(--gold)}
-    .cart-button{border:1px solid var(--gold);color:var(--gold);background:transparent;padding:10px 14px;border-radius:2px}
-    .hero{min-height:470px;background:linear-gradient(90deg,rgba(18,16,13,.94),rgba(18,16,13,.66)),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;padding:70px 8vw;color:white}
-    .hero-copy{max-width:600px}.eyebrow{color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;font-weight:bold}
-    h1{font:clamp(2.6rem,6vw,5rem)/1.02 Georgia,serif;font-weight:normal;margin:18px 0}.hero p{color:#e1d9cb;line-height:1.8;max-width:490px}
-    .primary{display:inline-block;background:var(--gold);color:#171411;border:0;padding:14px 21px;margin-top:16px;font-weight:bold;letter-spacing:.04em}.primary:hover{background:#ddbf80}
-    .section{padding:65px 6vw}.section-heading{text-align:center;margin-bottom:32px}.section-heading h2{font:normal clamp(2rem,4vw,3rem) Georgia,serif;margin:10px 0}.section-heading p{color:var(--muted);line-height:1.6}
-    .filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:0 auto 26px}.filter-btn{border:1px solid var(--line);background:var(--paper);padding:10px 14px;color:var(--ink)}.filter-btn.active,.filter-btn:hover{background:var(--ink);border-color:var(--ink);color:var(--gold)}
-    .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1200px;margin:auto}
-    .product{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}.product img{width:100%;aspect-ratio:4/4.3;object-fit:contain;background:#e9e0d1;padding:8px}
-    .product-info{padding:18px;display:flex;flex-direction:column;gap:9px;flex:1}.product-info h3{font:normal 1.3rem Georgia,serif;margin:0}.product-info p{color:var(--muted);font-size:.9rem;line-height:1.5;margin:0;flex:1}.price{font-weight:bold;color:#8a682c}.add{border:1px solid var(--ink);background:var(--ink);color:white;padding:12px;margin-top:6px}.add:hover{background:#393126}
-    .about{background:#e9e0d1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about h2{font:normal clamp(2rem,4vw,3rem) Georgia,serif;margin:12px 0}.about p{line-height:1.8;color:#514a40}
-    .about-art{min-height:280px;background:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1000&q=85') center/cover}
-    footer{background:var(--ink);color:#fff;padding:36px 6vw;text-align:center}footer p{color:#c9c0b1;line-height:1.7;font-size:.9rem}
-    .overlay{display:none;position:fixed;inset:0;background:#0009;z-index:10}.overlay.open{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:var(--paper);padding:24px;display:flex;flex-direction:column;box-shadow:-10px 0 30px #0002}
-    .cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.cart-head h2{font:normal 1.8rem Georgia,serif;margin:0}.close{border:0;background:none;font-size:1.7rem}.cart-items{overflow:auto;flex:1;padding:14px 0}.cart-row{padding:13px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:10px}.cart-row strong{display:block;margin-bottom:6px}.qty{display:flex;gap:9px;align-items:center;margin-top:8px}.qty button{border:1px solid var(--line);background:white;padding:4px 9px}.remove{border:0;background:none;color:#8a3c2f;font-size:.85rem}.cart-bottom{border-top:1px solid var(--line);padding-top:16px}.total{display:flex;justify-content:space-between;font-weight:bold;font-size:1.1rem}.checkout{width:100%;background:#16834a;color:white;border:0;padding:14px;margin-top:15px;font-weight:bold}.note{font-size:.8rem;color:var(--muted);line-height:1.5}
-    .empty{color:var(--muted);text-align:center;padding:40px 8px;line-height:1.6}
-    @media(max-width:760px){header{padding:15px 4vw;flex-wrap:wrap}.brand{font-size:1.05rem}nav{order:3;width:100%;justify-content:center;gap:18px;font-size:.84rem}.hero{min-height:430px;padding:55px 6vw}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-info{padding:13px}.product-info h3{font-size:1.1rem}.about{grid-template-columns:1fr}.about-art{min-height:230px}.section{padding:48px 4vw}}
-    @media(max-width:420px){.products{grid-template-columns:1fr 1fr}.product-info p{font-size:.82rem}.cart-button{padding:8px 10px}}
+    :root {
+      --ink: #171411;
+      --ink-soft: #2a241f;
+      --gold: #c8a45d;
+      --gold-soft: #e7d5a4;
+      --cream: #f6f0e8;
+      --paper: #fffdf9;
+      --muted: #756d63;
+      --line: #e8dfcf;
+      --shadow: 0 22px 55px rgba(23,20,17,.12);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    .announcement {
+      background: linear-gradient(90deg, var(--gold), #d7bb79);
+      color: var(--ink);
+      text-align: center;
+      padding: 10px 12px;
+      font-size: .76rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    header {
+      background: rgba(23,20,17,.96);
+      color: #fff;
+      padding: 18px 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(200,164,93,.26);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--gold);
+      font: 700 .63rem Arial, sans-serif;
+      letter-spacing: .33em;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: .9rem;
+      color: rgba(255,255,255,.9);
+    }
+
+    nav a { transition: color .2s ease; }
+    nav a:hover { color: var(--gold-soft); }
+
+    .cart-button {
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: all .2s ease;
+    }
+
+    .cart-button:hover { background: rgba(200,164,93,.08); }
+
+    .hero {
+      min-height: 560px;
+      padding: 70px 6vw 45px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(18,16,13,.88), rgba(18,16,13,.58)),
+        url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-copy { max-width: 620px; }
+
+    .eyebrow {
+      color: var(--gold-soft);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .73rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font: normal clamp(2.9rem, 6vw, 5.2rem) Georgia, serif;
+      line-height: 1.02;
+      margin: 18px 0 18px;
+      letter-spacing: -.04em;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,.8);
+      line-height: 1.8;
+      max-width: 560px;
+      font-size: 1.04rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .primary, .secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .primary {
+      background: var(--gold);
+      color: var(--ink);
+      box-shadow: 0 18px 35px rgba(200,164,93,.28);
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,.4);
+      color: #fff;
+      background: rgba(255,255,255,.04);
+    }
+
+    .primary:hover, .secondary:hover { transform: translateY(-2px); }
+
+    .hero-card {
+      justify-self: end;
+      width: min(100%, 420px);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255,255,255,.75);
+      font-size: .8rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .mini-bottle {
+      position: relative;
+      height: 360px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding: 14px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(189,149,81,.26), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .mini-bottle::before {
+      content: "";
+      position: absolute;
+      inset: 18px 25px 28px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .mini-bottle img {
+      position: relative;
+      z-index: 1;
+      width: 180px;
+      filter: drop-shadow(0 25px 22px rgba(0,0,0,.32));
+    }
+
+    .mini-meta {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      gap: 16px;
+    }
+
+    .mini-meta strong { font-size: 1.1rem; }
+    .mini-meta span { color: var(--gold-soft); }
+
+    .trust-bar {
+      max-width: 1200px;
+      margin: -24px auto 0;
+      padding: 0 6vw;
+      position: relative;
+      z-index: 3;
+    }
+
+    .trust-inner {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 32px rgba(24,18,14,.04);
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      padding: 18px 18px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff, #f8f5f0);
+    }
+
+    .trust-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(200,164,93,.14);
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: .97rem;
+      margin-bottom: 2px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .section {
+      padding: 82px 6vw;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 34px;
+    }
+
+    .section-heading h2 {
+      font: normal clamp(2.2rem, 4vw, 3.2rem) Georgia, serif;
+      margin: 11px 0;
+      letter-spacing: -.03em;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 auto 28px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: all .2s ease;
+    }
+
+    .filter-btn.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 30px rgba(23,20,17,.03);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(23,20,17,.08);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 4 / 4.3;
+      background: #f2ebdf;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(23,20,17,.74);
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: .7rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .product-info {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-info .eyebrow {
+      font-size: .62rem;
+      letter-spacing: .12em;
+      color: var(--muted);
+    }
+
+    .product h3 {
+      margin: 0;
+      font: normal 1.35rem Georgia, serif;
+      letter-spacing: -.02em;
+    }
+
+    .product p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .91rem;
+      line-height: 1.7;
+    }
+
+    .price-row {
+      margin-top: auto;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      padding-top: 4px;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+
+    .add {
+      background: var(--ink);
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      transition: opacity .2s ease;
+    }
+
+    .add:hover { opacity: .9; }
+
+    .feature-showcase {
+      background: #f1e8dd;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .showcase-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .feature-panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+      box-shadow: 0 16px 28px rgba(23,20,17,.02);
+    }
+
+    .feature-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .feature-panel h3 {
+      font: normal clamp(2rem, 3vw, 2.8rem) Georgia, serif;
+      line-height: 1.1;
+      margin: 10px 0 14px;
+    }
+
+    .feature-panel p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-item:last-child { border-bottom: 0; }
+
+    .feature-item .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(200,164,93,.14);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .feature-item span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .about {
+      background: #f8f4ee;
+    }
+
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .about-copy {
+      padding-right: 12px;
+    }
+
+    .about-copy h2 {
+      font: normal clamp(2.1rem, 4vw, 3.1rem) Georgia, serif;
+      margin: 10px 0 16px;
+      letter-spacing: -.04em;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin: 0 0 18px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .stat {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .83rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .about-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .about-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #1d1917, #2f2722);
+      color: #fff;
+      border-radius: 26px;
+      padding: 34px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 22px 55px rgba(23,20,17,.1);
+    }
+
+    .contact-box h3 {
+      font: normal clamp(1.8rem, 3vw, 2.8rem) Georgia, serif;
+      margin: 10px 0;
+      letter-spacing: -.04em;
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: rgba(255,255,255,.75);
+      line-height: 1.7;
+    }
+
+    .secondary.light {
+      border-color: rgba(255,255,255,.25);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #fff;
+      padding: 42px 6vw 26px;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-size: 1.1rem;
+      margin: 0 auto 8px;
+      display: inline-block;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.7);
+      margin: 12px auto 0;
+      max-width: 620px;
+      line-height: 1.8;
+      font-size: .94rem;
+    }
+
+    .copyright { margin-top: 16px; color: rgba(255,255,255,.55); font-size: .82rem; }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .55);
+      z-index: 50;
+      padding: 0;
+    }
+
+    .overlay.open { display: block; }
+
+    .cart-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: min(440px, 100%);
+      background: var(--paper);
+      box-shadow: -18px 0 35px rgba(0,0,0,.16);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+
+    .cart-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cart-head h2 {
+      margin: 0;
+      font: normal 1.8rem Georgia, serif;
+    }
+
+    .close {
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 2.1rem;
+      line-height: 1;
+      padding: 0 6px;
+    }
+
+    .cart-items {
+      overflow: auto;
+      padding: 16px 18px;
+    }
+
+    .cart-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cart-row strong { display: block; }
+    .cart-price {
+      display: inline-block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .cart-controls {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .qty-display {
+      min-width: 18px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .remove {
+      border: 0;
+      background: transparent;
+      color: #8a3b33;
+      font-weight: 700;
+      padding: 0;
+      margin-left: 2px;
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 50px 20px 20px;
+    }
+
+    .cart-bottom {
+      border-top: 1px solid var(--line);
+      padding: 18px 20px 20px;
+      background: #fff;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .note {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.7;
+    }
+
+    .checkout {
+      width: 100%;
+      border: 0;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      opacity: .55;
+      cursor: not-allowed;
+    }
+
+    .checkout.enabled {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .showcase-grid,
+      .about-grid,
+      .feature-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      .hero-card {
+        justify-self: stretch;
+        width: 100%;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .contact-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 760px) {
+      header {
+        flex-wrap: wrap;
+        padding: 16px 4vw;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        font-size: .82rem;
+      }
+
+      .brand { font-size: 1.1rem; }
+      .hero { padding-top: 54px; }
+      .trust-inner { grid-template-columns: 1fr; }
+      .products { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .about-media { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="announcement">YOUR NEXT SIGNATURE SCENT STARTS HERE</div>
+  <div class="announcement">Your next signature scent starts here</div>
+
   <header>
-    <a class="brand" href="#home">Collrios <small>FRAGRANCE</small></a>
-    <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="brand" href="#home">Collrios <small>Fragrance</small></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <button class="cart-button" id="openCart" aria-label="Open shopping cart">Cart (<span id="cartCount">0</span>)</button>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow">The art of fragrance</div>
-        <h1>Leave a little<br>luxury wherever you go.</h1>
-        <p>Explore fragrances from different brands for your mood, your moments, and your signature style. Browse the collection and message us to order.</p>
-        <a class="primary" href="#shop">EXPLORE THE COLLECTION</a>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">The art of fragrance</div>
+          <h1>Leave a little luxury wherever you go.</h1>
+          <p>Discover premium perfume blends for every mood, moment, and style. Explore curated fragrances from trusted brands and place your order directly through WhatsApp.</p>
+          <div class="hero-actions">
+            <a class="primary" href="#shop">Explore collection</a>
+            <a class="secondary" href="#contact">Ask a question</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Featured fragrance highlight">
+          <div class="hero-card-top">
+            <span>Featured pick</span>
+            <span>Best seller</span>
+          </div>
+          <div class="mini-bottle">
+            <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=700&q=80" alt="Luxury perfume bottle">
+          </div>
+          <div class="mini-meta">
+            <div>
+              <strong>Golden Aura</strong>
+              <span>Luxury blend</span>
+            </div>
+            <span>₦9,500</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <div class="trust-badge">✓</div>
+          <div>
+            <strong>Premium brands</strong>
+            <span>Curated fragrance collections</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-badge">⚡</div>
+          <div>
+            <strong>Fast WhatsApp orders</strong>
+            <span>Quick replies and confirmation</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-badge">★</div>
+          <div>
+            <strong>Trusted quality</strong>
+            <span>Fresh arrivals and signature scents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="section" id="shop">
-      <div class="section-heading"><div class="eyebrow">The collection</div><h2>Find Your Fragrance</h2><p>Browse our perfume collection, add your favourites to the cart, and order through WhatsApp.</p></div>
-      <div class="filters" id="categoryFilters" aria-label="Filter products by category"><button class="filter-btn active" data-category="All">All fragrances</button><button class="filter-btn" data-category="Perfumes">Perfumes</button></div><div class="products" id="productGrid"></div>
+      <div class="section-heading">
+        <div class="eyebrow">The collection</div>
+        <h2>Find your signature scent</h2>
+        <p>Browse our most-loved fragrances, from fresh and floral to deep and seductive. Add your favourites to the cart and send your order through WhatsApp.</p>
+      </div>
+
+      <div class="filters" id="categoryFilters" aria-label="Filter products by category">
+        <button class="filter-btn active" data-category="All">All fragrances</button>
+        <button class="filter-btn" data-category="Luxury">Luxury</button>
+        <button class="filter-btn" data-category="Floral">Floral</button>
+        <button class="filter-btn" data-category="Woody">Woody</button>
+        <button class="filter-btn" data-category="Gift Sets">Gift Sets</button>
+      </div>
+
+      <div class="products" id="productGrid"></div>
+    </section>
+
+    <section class="section feature-showcase">
+      <div class="showcase-grid">
+        <div class="feature-panel">
+          <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1000&q=80" alt="Perfume bottle display">
+          <div>
+            <div class="eyebrow">Why choose us</div>
+            <h3>Luxury that feels personal.</h3>
+            <p>Whether you want a bold everyday scent or a polished gift-ready fragrance, we help you choose the right one for your mood and style.</p>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="icon">01</div>
+                <div>
+                  <strong>Curated gifting</strong>
+                  <span>Elegant fragrances selected for everyday elegance and special occasions.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="icon">02</div>
+                <div>
+                  <strong>Fresh arrivals</strong>
+                  <span>New releases and premium favourites with a modern luxury finish.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="icon">03</div>
+                <div>
+                  <strong>Easy ordering</strong>
+                  <span>Build your cart, message us, and confirm your order in a few quick steps.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-panel">
+          <div>
+            <div class="eyebrow">Our promise</div>
+            <h3>Made for everyday confidence.</h3>
+            <p>We bring together elegant scents that balance sophistication and personality. Discover a fragrance collection that fits your daily routine and memorable moments.</p>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="icon">★</div>
+                <div>
+                  <strong>Signature presence</strong>
+                  <span>Perfumes chosen for their lasting character and refined finish.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="icon">✦</div>
+                <div>
+                  <strong>Modern luxury</strong>
+                  <span>A polished shopping experience designed to feel premium and effortless.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1000&q=80" alt="Luxury perfume arrangement">
+        </div>
+      </div>
     </section>
 
     <section class="section about" id="about">
-      <div><div class="eyebrow">About Collrios</div><h2>A scent that feels like you.</h2><p>Collrios Fragrance is a multi-brand perfume shop. Explore the collection, choose the scents you love, and contact us directly to confirm your order.</p><a class="primary" href="#shop">SHOP THE COLLECTION</a></div>
-      <div class="about-art" role="img" aria-label="Perfume bottles arranged elegantly"></div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About Collrios</div>
+          <h2>A scent that feels like you.</h2>
+          <p>Collrios Fragrance is a modern fragrance brand and boutique shopping experience designed for people who want quality, elegance, and effortless style. We curate premium perfumes that stand out for their depth, beauty, and everyday appeal.</p>
+          <p>From bold and woody to light and floral, every scent is selected to help you feel confident, memorable, and uniquely yourself.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>10+</strong>
+              <span>Signature scents</span>
+            </div>
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Client delight</span>
+            </div>
+            <div class="stat">
+              <strong>Daily</strong>
+              <span>Fresh arrivals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=900&q=80" alt="Perfume collection displayed elegantly">
+          <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80" alt="Luxury fragrance bottles and packaging">
+        </div>
+      </div>
     </section>
-    <section class="section" id="contact"><div class="section-heading"><div class="eyebrow">Get in touch</div><h2>Let's find your scent.</h2><p>Have a question about a fragrance? Message us on WhatsApp and we'll help you.</p><button class="primary" id="contactWhatsApp">MESSAGE US ON WHATSAPP</button></div></section>
+
+    <section class="section" id="contact">
+      <div class="contact-box">
+        <div>
+          <div class="eyebrow">Get in touch</div>
+          <h3>Let’s find your perfect scent.</h3>
+          <p>Have a question about one of our fragrances? Message us directly on WhatsApp and we’ll help you choose the best match.</p>
+        </div>
+        <button class="secondary light" id="contactWhatsApp">Message on WhatsApp</button>
+      </div>
+    </section>
   </main>
-  <footer><div class="brand">Collrios <small>FRAGRANCE</small></div><p>Find your signature scent.<br>Orders are confirmed directly with us on WhatsApp. No online payments on this website.</p><small>© <span id="year"></span> Collrios Fragrance</small></footer>
+
+  <footer>
+    <div class="brand">Collrios <small>Fragrance</small></div>
+    <p>Find your signature scent. Place your order directly with us on WhatsApp and enjoy a polished shopping experience tailored to your style.</p>
+    <div class="copyright">© <span id="year"></span> Collrios Fragrance. All rights reserved.</div>
+  </footer>
 
   <div class="overlay" id="cartOverlay" aria-hidden="true">
     <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
-      <div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-head">
+        <h2>Your Cart</h2>
+        <button class="close" id="closeCart" aria-label="Close cart">×</button>
+      </div>
       <div class="cart-items" id="cartItems"></div>
-      <div class="cart-bottom"><div class="total"><span>Estimated total</span><span id="cartTotal">₦0</span></div><p class="note">No payment is collected here. You'll send your selection to us on WhatsApp to confirm availability, delivery, and final cost.</p><button class="checkout" id="checkout">ORDER ON WHATSAPP</button></div>
+      <div class="cart-bottom">
+        <div class="total"><span>Estimated total</span><span id="cartTotal">₦0</span></div>
+        <p class="note">No payment is collected here. You’ll send your selected items to us on WhatsApp to confirm your order.</p>
+        <button class="checkout" id="checkout" type="button">Checkout</button>
+      </div>
     </aside>
   </div>
 
   <script>
-    // SETUP: Replace this with your WhatsApp number, including country code and no +, spaces, or dashes.
-    // Nigeria example format: 2348012345678
     const WHATSAPP_NUMBER = "2347039178020";
 
-    // Collrios Fragrance products. Prices are in Nigerian naira (₦).
     const products = [
-      {id:1,name:"Mosuf Alya",category:"Perfumes",price:6000,description:"Red bottle with gold detailing.",image:"images/mosuf-alya-red.jpeg"},
-      {id:2,name:"Asad",category:"Perfumes",price:9000,description:"Black and gold presentation box.",image:"images/asad-black-gold.jpeg"},
-      {id:3,name:"Mosuf (Blue Bottle)",category:"Perfumes",price:6000,description:"Blue bottle with silver detailing.",image:"images/mosuf-blue.jpeg"},
-      {id:4,name:"Bleu Nuit",category:"Perfumes",price:4500,description:"Blue presentation box.",image:"images/bleu-nuit.jpeg"},
-      {id:5,name:"Mosuf Three-Bottle Set",category:"Perfumes",price:15000,description:"Three-bottle display set.",image:"images/mosuf-three-bottle-set.jpeg"},
-      {id:6,name:"Amjaad",category:"Perfumes",price:4500,description:"Black and purple presentation box.",image:"images/amjaad.jpeg"}
+      { id: 1, name: "Mosuf Alya", category: "Luxury", price: 6000, description: "A rich and memorable scent with a warm, luxurious finish.", image: "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=900&q=80", badge: "Best seller" },
+      { id: 2, name: "Asad", category: "Luxury", price: 9000, description: "Deep woody notes with a refined and elegant fragrance profile.", image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80", badge: "Premium" },
+      { id: 3, name: "Mosuf Blue", category: "Floral", price: 6000, description: "Fresh and clean with a polished, airy balance of floral notes.", image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=900&q=80", badge: "Fresh" },
+      { id: 4, name: "Bleu Nuit", category: "Woody", price: 4500, description: "A sleek, modern scent with elegant wood and spice notes.", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80", badge: "Night" },
+      { id: 5, name: "Three-Bottle Set", category: "Gift Sets", price: 15000, description: "A curated set for gifting, collection, or a special seasonal treat.", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=80", badge: "Gift set" },
+      { id: 6, name: "Amjaad", category: "Floral", price: 4500, description: "Soft floral notes tailored for fresh, feminine elegance.", image: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=900&q=80", badge: "Popular" },
+      { id: 7, name: "Golden Aura", category: "Luxury", price: 9500, description: "Bright and radiating with a premium, signature present finish.", image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=900&q=80", badge: "Classic" },
+      { id: 8, name: "Velvet Bloom", category: "Floral", price: 6700, description: "A floral favorite with a soft opulent finish and lasting presence.", image: "https://images.unsplash.com/photo-1563170351-be82bc8888e3?auto=format&fit=crop&w=900&q=80", badge: "Elegant" }
     ];
+
     const cart = {};
-    const money = n => "₦" + n.toLocaleString("en-NG");
+    let activeCategory = "All";
+
     const grid = document.getElementById("productGrid");
     const cartCount = document.getElementById("cartCount");
+    const cartItems = document.getElementById("cartItems");
     const overlay = document.getElementById("cartOverlay");
+    const checkoutBtn = document.getElementById("checkout");
 
-    let activeCategory = "All";
-    function renderProducts(){
-      const visibleProducts = activeCategory === "All" ? products : products.filter(p => p.category === activeCategory);
-      grid.innerHTML = visibleProducts.map(p => `<article class="product">
-        <img src="${p.image}" alt="${p.name} perfume" loading="lazy">
-        <div class="product-info"><div class="eyebrow">${p.category}</div><h3>${p.name}</h3><p>${p.description}</p><div class="price">${money(p.price)}</div><button class="add" data-add="${p.id}">ADD TO CART</button></div>
-      </article>`).join("");
+    const money = value => "₦" + Number(value).toLocaleString("en-NG");
+
+    function renderProducts() {
+      const visibleProducts = activeCategory === "All"
+        ? products
+        : products.filter(product => product.category === activeCategory);
+
+      grid.innerHTML = visibleProducts.map(product => `
+        <article class="product">
+          <div class="product-image">
+            <span class="product-tag">${product.badge}</span>
+            <img src="${product.image}" alt="${product.name} perfume" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="eyebrow">${product.category}</div>
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="price-row">
+              <span class="price">${money(product.price)}</span>
+              <button class="add" data-add="${product.id}" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+      `).join("");
     }
-    document.getElementById("categoryFilters").addEventListener("click", e => {
-      const btn = e.target.closest("[data-category]");
+
+    function renderCart() {
+      const items = Object.values(cart);
+      const total = items.reduce((sum, item) => sum + item.product.price * item.qty, 0);
+      const totalQty = items.reduce((sum, item) => sum + item.qty, 0);
+
+      cartCount.textContent = totalQty;
+
+      cartItems.innerHTML = items.length
+        ? items.map(item => `
+          <div class="cart-row">
+            <div>
+              <strong>${item.product.name}</strong>
+              <span class="cart-price">${money(item.product.price)}</span>
+            </div>
+            <div class="cart-controls">
+              <button class="qty-btn" data-minus="${item.product.id}" type="button" aria-label="Decrease quantity">−</button>
+              <span class="qty-display">${item.qty}</span>
+              <button class="qty-btn" data-plus="${item.product.id}" type="button" aria-label="Increase quantity">+</button>
+              <button class="remove" data-remove="${item.product.id}" type="button">Remove</button>
+            </div>
+          </div>
+        `).join("")
+        : '<div class="empty">Your cart is empty.<br>Add a fragrance you love to get started.</div>';
+
+      document.getElementById("cartTotal").textContent = money(total);
+
+      const hasItems = items.length > 0;
+      checkoutBtn.disabled = !hasItems;
+      if (hasItems) {
+        checkoutBtn.classList.add("enabled");
+      } else {
+        checkoutBtn.classList.remove("enabled");
+      }
+    }
+
+    function openCart() {
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+      renderCart();
+    }
+
+    function closeCart() {
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden", "true");
+    }
+
+    function sendWhatsApp(message) {
+      if (!/^234\d{10}$/.test(WHATSAPP_NUMBER)) {
+        alert("The WhatsApp number has not been set up yet. Update the WHATSAPP_NUMBER constant in the script with your active number in the format 234XXXXXXXXXX.");
+        return;
+      }
+
+      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+    }
+
+    document.getElementById("categoryFilters").addEventListener("click", event => {
+      const btn = event.target.closest("[data-category]");
       if (!btn) return;
+
       activeCategory = btn.dataset.category;
-      document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b === btn));
+      document.querySelectorAll(".filter-btn").forEach(button => {
+        button.classList.toggle("active", button === btn);
+      });
       renderProducts();
     });
-    function renderCart(){
-      const items = Object.values(cart);
-      cartCount.textContent = items.reduce((sum,item)=>sum+item.qty,0);
-      document.getElementById("cartItems").innerHTML = items.length ? items.map(item=>`<div class="cart-row">
-        <div><strong>${item.product.name}</strong><span class="price">${money(item.product.price)}</span><div class="qty"><button data-minus="${item.product.id}" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button data-plus="${item.product.id}" aria-label="Increase quantity">+</button></div></div>
-        <button class="remove" data-remove="${item.product.id}">Remove</button></div>`).join("") : `<div class="empty">Your cart is empty.<br>Add a fragrance you love to get started.</div>`;
-      const total = items.reduce((sum,item)=>sum+item.product.price*item.qty,0);
-      document.getElementById("cartTotal").textContent = money(total);
-      document.getElementById("checkout").disabled = !items.length;
-      document.getElementById("checkout").style.opacity = items.length ? "1" : ".5";
-    }
-    function openCart(){overlay.classList.add("open");overlay.setAttribute("aria-hidden","false");renderCart()}
-    function closeCart(){overlay.classList.remove("open");overlay.setAttribute("aria-hidden","true")}
-    function sendWhatsApp(message){
-      if(!/^234\d{10}$/.test(WHATSAPP_NUMBER)){alert("The WhatsApp number has not been set up yet. In the HTML file, replace 234XXXXXXXXXX with your WhatsApp number including country code 234, with no + or spaces.");return}
-      window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener");
-    }
-    grid.addEventListener("click",e=>{const btn=e.target.closest("[data-add]");if(!btn)return;const p=products.find(x=>x.id===Number(btn.dataset.add));if(!cart[p.id])cart[p.id]={product:p,qty:0};cart[p.id].qty++;renderCart();btn.textContent="ADDED ✓";setTimeout(()=>btn.textContent="ADD TO CART",900)});
-    document.getElementById("cartItems").addEventListener("click",e=>{
-      const id=Number((e.target.closest("[data-plus]")||e.target.closest("[data-minus]")||e.target.closest("[data-remove]"))?.dataset.plus || e.target.closest("[data-minus]")?.dataset.minus || e.target.closest("[data-remove]")?.dataset.remove);
-      if(!id)return;
-      if(e.target.closest("[data-plus]"))cart[id].qty++;
-      if(e.target.closest("[data-minus]")){cart[id].qty--;if(cart[id].qty<=0)delete cart[id]}
-      if(e.target.closest("[data-remove]"))delete cart[id];
+
+    grid.addEventListener("click", event => {
+      const button = event.target.closest("[data-add]");
+      if (!button) return;
+
+      const id = Number(button.dataset.add);
+      const product = products.find(item => item.id === id);
+      if (!product) return;
+
+      if (!cart[id]) {
+        cart[id] = { product, qty: 0 };
+      }
+
+      cart[id].qty += 1;
       renderCart();
+      openCart();
     });
-    document.getElementById("openCart").addEventListener("click",openCart);
-    document.getElementById("closeCart").addEventListener("click",closeCart);
-    overlay.addEventListener("click",e=>{if(e.target===overlay)closeCart()});
-    document.getElementById("checkout").addEventListener("click",()=>{
-      const items=Object.values(cart);if(!items.length)return;
-      const lines=items.map(i=>`• ${i.product.name} x ${i.qty} — ${money(i.product.price*i.qty)}`).join("\n");
-      const total=items.reduce((sum,i)=>sum+i.product.price*i.qty,0);
-      sendWhatsApp(`Hello Collrios Fragrance! I'd like to enquire about this order:\n\n${lines}\n\nEstimated total: ${money(total)}\n\nPlease confirm availability, delivery fee, and final total. Thank you!`);
+
+    cartItems.addEventListener("click", event => {
+      const plusBtn = event.target.closest("[data-plus]");
+      const minusBtn = event.target.closest("[data-minus]");
+      const removeBtn = event.target.closest("[data-remove]");
+
+      if (plusBtn) {
+        const id = Number(plusBtn.dataset.plus);
+        if (cart[id]) cart[id].qty += 1;
+        renderCart();
+        return;
+      }
+
+      if (minusBtn) {
+        const id = Number(minusBtn.dataset.minus);
+        if (cart[id]) {
+          cart[id].qty -= 1;
+          if (cart[id].qty <= 0) delete cart[id];
+          renderCart();
+        }
+        return;
+      }
+
+      if (removeBtn) {
+        const id = Number(removeBtn.dataset.remove);
+        delete cart[id];
+        renderCart();
+      }
     });
-    document.getElementById("contactWhatsApp").addEventListener("click",()=>sendWhatsApp("Hello Collrios Fragrance! I'd like to ask about your perfumes."));
-    document.getElementById("year").textContent=new Date().getFullYear();
-    renderProducts();renderCart();
+
+    document.getElementById("openCart").addEventListener("click", openCart);
+    document.getElementById("closeCart").addEventListener("click", closeCart);
+
+    overlay.addEventListener("click", event => {
+      if (event.target === overlay) closeCart();
+    });
+
+    window.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeCart();
+    });
+
+    document.getElementById("checkout").addEventListener("click", () => {
+      const items = Object.values(cart);
+      if (!items.length) return;
+
+      const lines = items.map(item => `• ${item.product.name} x ${item.qty} — ${money(item.product.price * item.qty)}`).join("\n");
+      const total = items.reduce((sum, item) => sum + item.product.price * item.qty, 0);
+
+      sendWhatsApp(
+        "Hello Collrios Fragrance! I would like to order the following items:\n\n" +
+        lines + "\n\nEstimated total: " + money(total) + "\n\nPlease confirm availability and delivery details. Thank you."
+      );
+    });
+
+    document.getElementById("contactWhatsApp").addEventListener("click", () => {
+      sendWhatsApp("Hello Collrios Fragrance! I would like to ask about your perfumes and available scents.");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderProducts();
+    renderCart();
   </script>
 </body>
 </html>
